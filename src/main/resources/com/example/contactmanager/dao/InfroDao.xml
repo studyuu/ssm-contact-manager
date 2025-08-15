@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.contactmanager.dao.InfroDao">
+    <insert id="addContact" parameterType="com.example.contactmanager.entity.Infro">
+        INSERT INTO contacts (id, name, sex, address, e_mail, phoneNumber)
+        VALUES (#{id}, #{name}, #{sex}, #{address}, #{e_mail}, #{phoneNumber})
+    </insert>
+    <delete id="deleteContact" parameterType="java.lang.String">
+        DELETE FROM contacts WHERE id = #{id}
+    </delete>
+    <update id="editContact" parameterType="com.example.contactmanager.entity.Infro">
+        UPDATE contacts
+        SET name = #{name},
+            sex = #{sex},
+            address = #{address},
+            e_mail = #{e_mail},
+            phoneNumber = #{phoneNumber}
+        WHERE id = #{id}
+    </update>
+    <select id="searchContact" parameterType="java.lang.String" resultType="com.example.contactmanager.entity.Infro">
+        SELECT * FROM contacts WHERE id = #{id}
+    </select>
+    <select id="getAllContacts" resultType="com.example.contactmanager.entity.Infro">
+        SELECT * FROM contacts
+    </select>
+</mapper>    

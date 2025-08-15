@@ -1,0 +1,10 @@
+com\example\contactmanager\dao\UserDao.class
+com\example\contactmanager\controller\InfroController.class
+com\example\contactmanager\entity\Infro.class
+com\example\contactmanager\service\impl\UserServiceImpl.class
+com\example\contactmanager\service\UserService.class
+com\example\contactmanager\controller\UserController.class
+com\example\contactmanager\service\InfroService.class
+com\example\contactmanager\entity\User.class
+com\example\contactmanager\service\impl\InfroServiceImpl.class
+com\example\contactmanager\dao\InfroDao.class
